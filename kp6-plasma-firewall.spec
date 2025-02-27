@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.3.1
+%define		kdeplasmaver	6.3.2
 %define		qtver		5.15.2
 %define		kpname		plasma-firewall
 %define		kf6ver		5.39.0
 
 Summary:	plasma-firewall
 Name:		kp6-%{kpname}
-Version:	6.3.1
+Version:	6.3.2
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	0ee19ce7e8d6f35b38a83704ad48fcc8
+# Source0-md5:	488fc23da31e10dd7bc2a1e36ee6716d
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.0
 BuildRequires:	Qt6DBus-devel >= 5.15.0
