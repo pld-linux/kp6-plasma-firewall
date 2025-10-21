@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.4.5
+%define		kdeplasmaver	6.5.0
 %define		qtver		5.15.2
 %define		kpname		plasma-firewall
 %define		kf6ver		5.39.0
 
 Summary:	plasma-firewall
 Name:		kp6-%{kpname}
-Version:	6.4.5
-Release:	2
+Version:	6.5.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	68728ac9c244c1a660f10295c233aab3
+# Source0-md5:	89ff9da83145b67c0415e8029583c343
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.0
 BuildRequires:	Qt6DBus-devel >= 5.15.0
@@ -80,8 +80,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_libdir}/libkcm_firewall_core.so
 %dir %{_libdir}/qt6/plugins/kf6/plasma_firewall
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/plasma_firewall/firewalldbackend.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/plasma_firewall/ufwbackend.so
+%{_libdir}/qt6/plugins/kf6/plasma_firewall/firewalldbackend.so
+%{_libdir}/qt6/plugins/kf6/plasma_firewall/ufwbackend.so
 %attr(755,root,root) %{_prefix}/libexec/kde_ufw_plugin_helper.py
 %{_datadir}/dbus-1/system-services/org.kde.ufw.service
 %{_datadir}/dbus-1/system.d/org.kde.ufw.conf
@@ -89,6 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kcm_ufw/defaults
 %{_datadir}/metainfo/org.kde.plasma.firewall.metainfo.xml
 %{_datadir}/polkit-1/actions/org.kde.ufw.policy
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_firewall.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_firewall.so
 %{_desktopdir}/kcm_firewall.desktop
 %attr(755,root,root) %{_prefix}/libexec/kf6/kauth/kde_ufw_plugin_helper
