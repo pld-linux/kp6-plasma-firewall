@@ -46,6 +46,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Plasma 6 Firewall KCM.
 
+%description -l pl.UTF-8
+Moduł KCM ściany ogniowej Plazmy.
+
 %prep
 %setup -q -n %{kpname}-%{version}
 
